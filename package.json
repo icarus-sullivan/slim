@@ -1,0 +1,26 @@
+{
+  "name": "@sullivan/slim",
+  "version": "0.0.1",
+  "description": "A tiny javascript template library",
+  "repository": "https://github.com/icarus-sullivan/slim.git",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "tsc -p ."
+  },
+  "files": [
+    "lib/*"
+  ],
+  "keywords": [
+    "template",
+    "js",
+    "slim",
+    "tiny"
+  ],
+  "author": "Chris Sullivan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.6.2",
+    "typescript": "^3.5.3"
+  }
+}

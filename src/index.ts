@@ -1,12 +1,8 @@
 
 const INTERPOLATED = /{{.*?}}/g;
 
-interface Cache {
-  [key: string]: any,
-};
-
 // global cache for speed
-const cache: Cache = {};
+const cache: any = {};
 
 const meme = (fn: Function) => (str: string) => {
   if (!cache[str]) {

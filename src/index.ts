@@ -32,7 +32,7 @@ module.exports = (template: string|string[], ...args: string[]) => (context: any
     const exists = context[cleaned];
     return exists && typeof exists === 'function'
       ? exists(context)
-      : compile(found.slice(2, -2)).apply(context);
+      : compile(cleaned).apply(context);
   });
 
   return parse(template, ...(args || [])).replace(INTERPOLATED, replacer);

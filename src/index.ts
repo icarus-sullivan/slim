@@ -1,14 +1,14 @@
 
 const INTERPOLATED = /{{.*?}}/g;
 
-// global cache for speed
-const cache: any = {};
-
-const meme = (fn: Function) => (str: string) => {
-  if (!cache[str]) {
-    cache[str] = fn.call(null, str);
+const meme = (fn: Function) => {
+  const cache: any = {};
+  return (str: string) => {
+    if (!cache[str]) {
+      cache[str] = fn.call(null, str);
+    }
+    return cache[str];
   }
-  return cache[str];
 }
 
 const compile = meme((cmd: string) => new Function(`with(this) {

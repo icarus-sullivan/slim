@@ -1,6 +1,6 @@
 {
   "name": "@sullivan/slim",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny javascript template library",
   "repository": "https://github.com/icarus-sullivan/slim.git",
   "main": "lib/index.js",
